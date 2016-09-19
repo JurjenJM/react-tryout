@@ -1,5 +1,10 @@
 
 @Record = React.createClass
+  getInitialState: ->
+    edit: false
+  handleToggle: (e) ->
+    e.preventDefault()
+    @setState edit: !@state.edit
   handleDelete: (e) ->
     e.preventDefault()
     # yeah... jQuery doesn't have a $.delete shortcut method
